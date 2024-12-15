@@ -155,6 +155,11 @@ public final class TabPlayer implements Comparable<TabPlayer> {
         }
 
         displayName = Placeholder.replaceInternal(displayName, plugin, this).first();
+
+        if (displayName.contains("%")) {
+            displayName = "";
+        }
+
         return lastDisplayName = displayName;
     }
 
